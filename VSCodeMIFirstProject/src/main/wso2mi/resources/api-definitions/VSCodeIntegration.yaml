@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: VSCodeIntegration
+  description: API Definition of VSCodeIntegration
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/vscodeintegration
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response
