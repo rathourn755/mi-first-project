@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/restapiserviceexc1" name="RestAPIServiceExc1" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/">
+        <inSequence>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+    <!-- <inSequence key="RestAPIExcSequence1"/> -->
+    <resource methods="POST" uri-template="/user/{userId}">
+        <inSequence>
+            <sequence key="RestAPIExcSequence1"/>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

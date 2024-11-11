@@ -1,0 +1,34 @@
+openapi: 3.0.1
+info:
+  title: RestAPIServiceExc1
+  description: API Definition of RestAPIServiceExc1
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/restapiserviceexc1
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response
+  /user/{userId}:
+    post:
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response

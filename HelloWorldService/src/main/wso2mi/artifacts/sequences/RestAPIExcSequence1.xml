@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="RestAPIExcSequence1" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property name="userIDValue" scope="default" type="STRING" expression="uri.val.userId"/>
+    <property name="isUserAllowed" scope="default" type="BOOLEAN" expression="json-eval($.userAllowed)"/>
+    <log category="INFO" level="custom">
+        <property name="PrintUserId" expression="$ctx:userIDValue"/>
+    </log>
+    <log category="INFO" level="custom">
+        <property name="IsUserAllowed" expression="$ctx:userAllowed"/>
+    </log>
+</sequence>
